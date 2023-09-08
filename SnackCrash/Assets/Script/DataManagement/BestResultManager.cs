@@ -49,6 +49,11 @@ public class BestResultManager : MonoBehaviour
         {
             WriteHardResult();
         }
+
+        else if (difficulty == 4)
+        {
+            WriteAllResult();
+        }
     }
 
 
@@ -71,5 +76,12 @@ public class BestResultManager : MonoBehaviour
         first.text = "1st) " + PlayerPrefs.GetString("Hard1Name") + "\t" + PlayerPrefs.GetInt("Hard1Score");
         second.text = "2nd) " + PlayerPrefs.GetString("Hard2Name") + "\t" + PlayerPrefs.GetInt("Hard2Score");
         third.text = "3rd) " + PlayerPrefs.GetString("Hard3Name") + "\t" + PlayerPrefs.GetInt("Hard3Score");
+    }
+
+    public void WriteAllResult()
+    {
+        first.text = "Easy " + PlayerPrefs.GetString("Easy1Name") + "\t" + PlayerPrefs.GetInt("Easy1Score");
+        second.text = "Normal " + PlayerPrefs.GetString("Normal1Name") + "\t" + PlayerPrefs.GetInt("Normal1Score");
+        third.text = "Hard  " + PlayerPrefs.GetString("Hard1Name") + "\t" + PlayerPrefs.GetInt("Hard1Score");
     }
 }
