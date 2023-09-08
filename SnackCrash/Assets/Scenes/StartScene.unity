@@ -667,7 +667,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 710021994}
         m_TargetAssemblyTypeName: SceneSelect, Assembly-CSharp
-        m_MethodName: MoveToMain
+        m_MethodName: MoveToSelect
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
