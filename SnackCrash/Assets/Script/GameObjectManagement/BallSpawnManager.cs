@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class BallSpawnManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject BallPrefab;
+    public Transform SpawnPoint_Ball;
+
     void Start()
     {
-        
+        SpawnBall();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SpawnBall()
     {
-        
+        Instantiate(BallPrefab, SpawnPoint_Ball.position, Quaternion.identity);
     }
+
 }
