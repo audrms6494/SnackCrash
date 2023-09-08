@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class PaddleSpawnManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject PaddlePrefab;
+    public Transform SpawnPoint_Paddle;
     void Start()
     {
-        
+        SpawnPaddle();
+    }
+ 
+    public void SpawnPaddle()
+    {
+        Instantiate(PaddlePrefab, SpawnPoint_Paddle.position, Quaternion.identity);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
