@@ -8,36 +8,39 @@ public class StageManager : MonoBehaviour
 
     private void Start()
     {
+        PlayerPrefs.DeleteAll();
 
         if (!PlayerPrefs.HasKey("playerLevel") && !PlayerPrefs.HasKey("stageLevel"))
         {
             PlayerPrefs.SetInt("playerLevel", 0);
             PlayerPrefs.SetInt("stageLevel", 1);
         }
-        Debug.Log(PlayerPrefs.GetInt("playerLevel"));
 
-        CheckStage(PlayerPrefs.GetInt("playerLevel"));
+        CheckStage(PlayerPrefs.GetInt("stageLevel"));
     }
 
-    void CheckAccessible(GameObject gameObject)
-    {
+    //void CheckAccessible(GameObject gameObject)
+    //{
 
-    }
+    //}
 
-    void CheckStage(int playerLevel)
+    void CheckStage(int stageLevel)
     {
-        for (int i = playerLevel; i < 4; i++)
+        for (int i = stageLevel; i < 4; i++)
         {
-            if (i + 1 < PlayerPrefs.GetInt("stageLevel"))
+            if (i + 1 > PlayerPrefs.GetInt("playerLevel"))
             {
-                LockStage(PlayerPrefs.GetInt("stageLevel"));
+                LockStage(i + 1);
             }
         }
     }
 
     void LockStage(int stageLevel)
     {
-        Canvas.transform.Find($"Stage{stageLevel}LockPanel").gameObject.SetActive(true);
-        Canvas.transform.Find($"Stage{stageLevel}").gameObject.SetActive(false);
+        if (stageLevel < 4)
+        {
+            Canvas.transform.Find($"Stage{stageLevel}LockPanel").gameObject.SetActive(true);
+            Canvas.transform.Find($"Stage{stageLevel}").gameObject.SetActive(false);
+        }
     }
 }
