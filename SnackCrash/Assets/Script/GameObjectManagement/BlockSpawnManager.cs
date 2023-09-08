@@ -16,6 +16,10 @@ public class BlockSpawnManager : MonoBehaviour
     {
         //여기서 난이도에 따라 다른 숫자를 넣을 수 있다. 
         SpawnBricks(30);
+        if(MainSceneManager == null)
+        {
+            MainSceneManager = GameObject.FindObjectOfType<MainSceneManager>();
+        }
     }
 
     public void SpawnBricks(int TotalBlocks)

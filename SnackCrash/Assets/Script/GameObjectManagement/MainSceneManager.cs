@@ -7,6 +7,17 @@ public class MainSceneManager : MonoBehaviour
     public BallSpawnManager SpawnManager_Ball;
     public BlockSpawnManager SpawnManager_Block;
 
+    private void Start()
+    {
+        if(SpawnManager_Ball == null)
+        {
+            SpawnManager_Ball = GameObject.FindObjectOfType<BallSpawnManager>();
+        }
+        if(SpawnManager_Block == null)
+        {
+            SpawnManager_Block = GameObject.FindObjectOfType<BlockSpawnManager>();
+        }
+    }
     public void CheckGameOver(bool ballisZero)
     {
         //공은 0 개 일때 게임오버
