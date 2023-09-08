@@ -16,13 +16,34 @@ public class BlockSpawnManager : MonoBehaviour
 
     public Transform[] SpawnPointForDiffiCulty;
 
-    void Start()
-    {
-        SpawnBricksWidth(1,5,1);
-    }
-    //난이도에 따른 구현
 
-   //블록 하나 만들어 배열에 넣어주는 메서드
+    //난이도에 따른 구현
+    public void SpawnPattern1()
+    {
+        SpawnBricksWidth(0, 5, 1);
+        SpawnBricksWidth(0, 5, 2);
+    }
+    public void SpawnPattern2()
+    {
+        SpawnBricksHeight(0,5,0);
+        SpawnBricksHeight(0,5,1);
+        SpawnBricksHeight(0, 5, 3);
+        SpawnBricksHeight(0, 5, 4);
+    }
+    public void SpawnPattern3()
+    {
+        SpawnUti(0,0,1);
+        SpawnUti(4,0,2);
+        SpawnUti(1, 1, 3);
+        SpawnUti(3, 1, 4);
+        SpawnUti(2, 2, 6);
+        SpawnUti(1, 3, 2);
+        SpawnUti(3, 3, 3);
+        SpawnUti(0, 4, 4);
+        SpawnUti(4, 4, 5);
+    }
+
+    //블록 하나 만들어 배열에 넣어주는 메서드,
     public void SpawnUti(int x, int y, int CIndex)
     {
         BlockClear = false;
@@ -34,15 +55,15 @@ public class BlockSpawnManager : MonoBehaviour
         Blocks.Add(block);
     }
 
-    //세로로 position 위치에 한 줄
+    //가로로 position 위치에 한 줄
     public void SpawnBricksWidth(int start, int finish, int position)
     {
-        for (int j = start; j <= finish; j++)
+        for (int j = start; j < finish; j++)
         {
             SpawnUti(j, position, j);
         }
     }
-    //세로 한 줄
+    //가로 한 줄
     public void SpawnBricksWidth(int start, int position)
     {
         for (int j = start; j < 5 ; j++)
@@ -50,16 +71,16 @@ public class BlockSpawnManager : MonoBehaviour
             SpawnUti(j, position, j);
         }
     }
-    //가로로 position 위치에 한 줄
-    public void SpawnBricksLine(int start, int finish,int position)
+    //세로로 position 위치에 한 줄
+    public void SpawnBricksHeight(int start, int finish,int position)
     {
-        for (int j = start; j <= finish; j++)
+        for (int j = start; j < finish; j++)
         {
             SpawnUti(position, j, j);
         }
     }
-    //가로 한줄
-    public void SpawnBricksLine(int start, int position)
+    //세로 한줄
+    public void SpawnBricksHeight(int start, int position)
     {
         for (int j = start; j < 5; j++)
         {
