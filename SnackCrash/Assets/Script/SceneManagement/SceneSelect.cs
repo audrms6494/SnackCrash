@@ -1,18 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SceneSelect : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void MoveToStart()
     {
-        
+        SceneManager.LoadScene("StartScene");
     }
 
-    // Update is called once per frame
-    void Update()
+    public void MoveToMain()
     {
-        
+        SceneManager.LoadScene("MainScene");
     }
+
+    public void MoveToSelect()
+    {
+        SceneManager.LoadScene("SelectScene");
+    }
+
+    public void MoveToResult()
+    {
+        SceneManager.LoadScene("ResultScene");
+    }
+    public void MoveToCredit()
+    {
+        SceneManager.LoadScene("CreditScene");
+    }
+
 }
