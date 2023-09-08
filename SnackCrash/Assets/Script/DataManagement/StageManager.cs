@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class StageManager : MonoBehaviour
 {
-
     [SerializeField] private GameObject Canvas;
 
     private void Start()
@@ -45,7 +44,3 @@ public class StageManager : MonoBehaviour
         }
     }
 }
-
-   
-
-
