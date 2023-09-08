@@ -4,15 +4,40 @@ using UnityEngine;
 
 public class BallSpawnManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public MainSceneManager MainSceneManager;
+    public GameObject BallPrefab;
+    public List<GameObject> Balls;
+    public Transform SpawnPoint_Ball;
+    public bool BallisZero=false;
+   
     void Start()
     {
-        
+        SpawnBall();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SpawnBall()
     {
-        
+        BallisZero = false;
+        GameObject ball= Instantiate(BallPrefab, SpawnPoint_Ball.position, Quaternion.identity);
+        Balls.Add(ball);
+    }
+    public bool CheckBalIisZero()
+    {
+        if(Balls.Count == 0)
+        {
+            return true;
+        }
+        return false;
+    }
+
+    public void DestroyBall(GameObject ball)
+    {
+        if (ball != null && Balls.Contains(ball))
+        {
+            Balls.Remove(ball);
+            Destroy(ball);
+        }
+        BallisZero=CheckBalIisZero();
+        MainSceneManager.CheckGameOver(BallisZero);
     }
 }
