@@ -6,7 +6,7 @@ using UnityEngine;
 public class Paddle : MonoBehaviour
 {
     public float moveSpeed;
-
+    public float UpPower = 120f;
     void Update()
     {
         float mouseX = Input.mousePosition.x;
