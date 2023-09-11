@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ball
   - Player1
+
   layers:
   - Default
   - TransparentFX
@@ -13,11 +14,11 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Paddle
+  - Ball
+  - Block
+  - Wall
+  - Item
   - 
   - 
   - 

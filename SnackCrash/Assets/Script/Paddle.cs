@@ -6,7 +6,6 @@ using UnityEngine;
 public class Paddle : MonoBehaviour
 {
     public float moveSpeed;
-    public float UpPower = 120f;
     void Update()
     {
         float mouseX = Input.mousePosition.x;
@@ -14,6 +13,11 @@ public class Paddle : MonoBehaviour
         Vector3 mousePosition=Camera.main.ScreenToWorldPoint(new Vector3(mouseX,0,0));
 
         transform.position = new Vector3(mousePosition.x, transform.position.y, transform.position.z);
+    }
+
+    public float GetPositionX()
+    {
+        return this.transform.position.x;
     }
 }
 
