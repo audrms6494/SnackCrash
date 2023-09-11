@@ -12,6 +12,9 @@ TagManager:
   - Paddle
   - Block
   - Item
+  - Paddle_Low
+  - Paddle_High
+  - Paddle_Mid
   layers:
   - Default
   - TransparentFX
