@@ -1973,7 +1973,9 @@ MonoBehaviour:
   MainSceneManager: {fileID: 59753072}
   ItemSpawnManager: {fileID: 471296016}
   Blocks: []
-  BlockPrefab: {fileID: 2229833542773216318, guid: da157b470ee5e744eb8752713f602407, type: 3}
+  BlockPrefab:
+  - {fileID: 2229833542773216318, guid: da157b470ee5e744eb8752713f602407, type: 3}
+  - {fileID: 1523493251077640675, guid: c6fc34d6076c8ff498b0c835eb06aab7, type: 3}
   Spawnpoint_Block: {fileID: 563985768}
   Colors:
   - {r: 1, g: 0, b: 0, a: 1}

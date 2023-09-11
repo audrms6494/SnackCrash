@@ -42,7 +42,7 @@ public class Ball_2 : MonoBehaviour
         else if (collision.gameObject.CompareTag("Paddle_High"))
         {
             float sign = Mathf.Sign(Movement_x);
-            float angleInRadians = 75f * Mathf.Deg2Rad;
+            float angleInRadians = 60f * Mathf.Deg2Rad;
             float speed = Mathf.Sqrt(Movement_x * Movement_x + Movement_y * Movement_y);
             Movement_x = speed * Mathf.Cos(angleInRadians) * sign;
             Movement_y = speed * Mathf.Sin(angleInRadians);
