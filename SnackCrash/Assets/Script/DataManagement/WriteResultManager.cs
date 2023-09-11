@@ -13,7 +13,7 @@ public class WriteResultManager : MonoBehaviour
 
     // PlayerPrefs key value 생성
     private string difficulty = "Easy"; // 받아올 예정
-    // private string difficulty = PlayerPrefs.GetString("CurrentDifficulty");
+    // private string difficulty = PlayerPrefs.GetString("playerStage");
     private string opponentKey;
 
     private string tempKey1;
