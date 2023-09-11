@@ -9,9 +9,11 @@ public class WriteResultManager : MonoBehaviour
     public TMP_InputField playerNameInput;
     private string playerName = null;
     private int playerScore = 40; // 받아올 예정
+    // private int playerScore = PlayerPrefs.GetInt("CurrentScore");
 
     // PlayerPrefs key value 생성
     private string difficulty = "Easy"; // 받아올 예정
+    // private string difficulty = PlayerPrefs.GetString("CurrentDifficulty");
     private string opponentKey;
 
     private string tempKey1;
