@@ -40,7 +40,7 @@ public class PaddleSpawnManager : MonoBehaviour
         }
 
         // 새 패들 생성 및 큐에 추가
-        GameObject newPaddle = Instantiate(InputPaddle, new Vector3(x,0,0), Quaternion.identity);
+        GameObject newPaddle = Instantiate(InputPaddle, new Vector3(x,-4,0), Quaternion.identity);
         Paddle.Enqueue(newPaddle);
     }
 }

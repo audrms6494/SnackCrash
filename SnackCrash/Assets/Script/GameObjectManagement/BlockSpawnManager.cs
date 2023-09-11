@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -89,8 +90,6 @@ public class BlockSpawnManager : MonoBehaviour
         }
     }
 
-
-
     //블록 색깔 수정
     public void ChangeBlockColor(GameObject block, int CIndex)
     {
@@ -105,7 +104,7 @@ public class BlockSpawnManager : MonoBehaviour
     {
         if (Block != null && Blocks.Contains(Block))
         {
-            ItemSpawnManager.SpawnItem(0, 1, Block.gameObject.transform);
+            ItemSpawnManager.CallBlockBreak(Block.transform);
             Blocks.Remove(Block);
             Destroy(Block);
         }
