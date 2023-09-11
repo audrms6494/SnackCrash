@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -7,6 +8,7 @@ using static Unity.Collections.AllocatorManager;
 public class BlockSpawnManager : MonoBehaviour
 {
     public MainSceneManager MainSceneManager;
+    public ItemSpawnManager ItemSpawnManager;
     public List<GameObject> Blocks;
     public GameObject BlockPrefab;
     public Transform Spawnpoint_Block;
@@ -14,7 +16,7 @@ public class BlockSpawnManager : MonoBehaviour
     private int colorIndex = -1; // 현재 색상 인덱스
     public bool BlockClear = false;
 
-    public Transform[] SpawnPointForDiffiCulty;
+    public Transform[] SpawnPointForDifficulty;
 
 
     //난이도에 따른 구현
@@ -88,8 +90,6 @@ public class BlockSpawnManager : MonoBehaviour
         }
     }
 
-
-
     //블록 색깔 수정
     public void ChangeBlockColor(GameObject block, int CIndex)
     {
@@ -104,6 +104,7 @@ public class BlockSpawnManager : MonoBehaviour
     {
         if (Block != null && Blocks.Contains(Block))
         {
+            ItemSpawnManager.CallBlockBreak(Block.transform);
             Blocks.Remove(Block);
             Destroy(Block);
         }
