@@ -19,5 +19,9 @@ public class DestroyField : MonoBehaviour
         {
             BallSpawnManager.DestroyBall(collision.gameObject);
         }
+        if (collision.gameObject.CompareTag("Item"))
+        {
+            Destroy(collision.gameObject);
+        }
     }
 }
