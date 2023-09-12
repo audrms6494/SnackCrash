@@ -61,6 +61,10 @@ public class MainSceneManager : MonoBehaviour
         {
             GameOver.SetActive(true);
             Debug.Log("GameOver");
+
+            // -- 송명근 게임 오버 됐을 때에도 점수 실행
+            FinishedScore = SpawnManager_Block.CuScore;
+            PlayerPrefs.SetInt("CurrentScore", FinishedScore);
         }
     }
     public void CheckClear(bool blockisZero)
