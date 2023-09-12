@@ -5,8 +5,16 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ball
-  - Player1
-
+  - RightWall
+  - LeftWall
+  - Top
+  - Bottom
+  - Paddle
+  - Block
+  - Item
+  - Paddle_Low
+  - Paddle_High
+  - Paddle_Mid
   layers:
   - Default
   - TransparentFX

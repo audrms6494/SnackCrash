@@ -6,7 +6,9 @@ public class MainSceneManager : MonoBehaviour
 {
     public BallSpawnManager SpawnManager_Ball;
     public BlockSpawnManager SpawnManager_Block;
-
+    public GameObject Clear;
+    public GameObject GameOver;
+    private int CuStage=0;
     private void Start()
     {
         if(SpawnManager_Ball == null)
@@ -17,12 +19,43 @@ public class MainSceneManager : MonoBehaviour
         {
             SpawnManager_Block = GameObject.FindObjectOfType<BlockSpawnManager>();
         }
+        if (PlayerPrefs.HasKey("playerLevel"))
+        {
+           CuStage= PlayerPrefs.GetInt("playerLevel");
+           if(CuStage<1 || CuStage > 3)
+           {
+                Debug.Log("PlayerPrefs.GetInt(playerLevel) is Not 1~3");
+                CuStage = 3;
+           }
+           switch(CuStage)
+           {
+                case 1:
+                    SpawnManager_Block.SpawnPattern1();
+                    SpawnManager_Ball.SpawnBall_velocity();
+                    break; 
+                case 2:
+                    SpawnManager_Block.SpawnPattern2();
+                    SpawnManager_Ball.SpawnBall_velocity();
+                    break; 
+                case 3:
+                    SpawnManager_Block.SpawnPattern3();
+                    SpawnManager_Ball.SpawnBall_velocity();
+                    break;
+                default: 
+                    break;
+           }
+        }
+        else
+        {
+            Debug.Log("PlayerPrefs.HasKey(playerLevel) == Null");
+        }
     }
     public void CheckGameOver(bool ballisZero)
     {
         //공은 0 개 일때 게임오버
         if (ballisZero)
         {
+            GameOver.SetActive(true);
             Debug.Log("GameOver");
         }
     }
@@ -31,6 +64,12 @@ public class MainSceneManager : MonoBehaviour
         //블록은 0 개 일때 게임 클리어
         if (blockisZero)
         {
+            int stageLevel = PlayerPrefs.GetInt("stageLevel");
+            Clear.SetActive(true);
+            if (CuStage>stageLevel)
+            {
+                PlayerPrefs.SetInt("stageLevel", CuStage);
+            }
             Debug.Log("GameClear");
         }
     }

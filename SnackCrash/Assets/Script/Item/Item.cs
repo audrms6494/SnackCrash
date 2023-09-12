@@ -21,7 +21,7 @@ public class Item : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Paddle"))
+        if (collision.gameObject.CompareTag("Paddle")|| collision.gameObject.CompareTag("Paddle_Low")|| collision.gameObject.CompareTag("Paddle_Mid")|| collision.gameObject.CompareTag("Paddle_High"))
         {
             PdManager.SpawnPaddle(ChangePaddle);
             Destroy(gameObject);
