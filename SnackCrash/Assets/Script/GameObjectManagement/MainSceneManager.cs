@@ -8,6 +8,7 @@ public class MainSceneManager : MonoBehaviour
     public BlockSpawnManager SpawnManager_Block;
     public GameObject Clear;
     public GameObject GameOver;
+    public int FinishedScore;
     private int CuStage=0;
     private bool clear = false;
     private void Start()
@@ -65,6 +66,7 @@ public class MainSceneManager : MonoBehaviour
         //블록은 0 개 일때 게임 클리어
         if (blockisZero)
         {
+         
             clear=true;
             int stageLevel = PlayerPrefs.GetInt("stageLevel");
             Clear.SetActive(true);
@@ -73,6 +75,9 @@ public class MainSceneManager : MonoBehaviour
                 PlayerPrefs.SetInt("stageLevel", CuStage);
             }
             Debug.Log("GameClear");
+            FinishedScore = SpawnManager_Block.CuScore;
+            //이 밑에 Score 저장.
+            PlayerPrefs.SetInt("CurrentScore", FinishedScore);
         }
     }
 }
