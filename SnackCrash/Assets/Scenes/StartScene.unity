@@ -240,6 +240,7 @@ GameObject:
   - component: {fileID: 273136408}
   - component: {fileID: 273136410}
   - component: {fileID: 273136409}
+  - component: {fileID: 273136411}
   m_Layer: 5
   m_Name: JellyBear (1)
   m_TagString: Untagged
@@ -305,6 +306,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 273136407}
   m_CullTransparentMesh: 1
+--- !u!95 &273136411
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 273136407}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a8b16f16929a2b4408254bbd3b4f36c9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &296033738
 GameObject:
   m_ObjectHideFlags: 0
