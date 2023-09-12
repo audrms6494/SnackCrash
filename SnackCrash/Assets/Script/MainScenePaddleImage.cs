@@ -16,6 +16,4 @@ public class MainScenePaddleImage : MonoBehaviour
             PaddleImage.sprite = selectedSprite;
         }
     }
-
-    
 }

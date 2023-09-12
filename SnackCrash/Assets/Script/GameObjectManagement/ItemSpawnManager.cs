@@ -55,8 +55,6 @@ public class ItemSpawnManager : MonoBehaviour
  
    public void CallBlockBreak(Transform transform)
    {
-        //블록 파괴 시 블록에 대한 정보가 이 곳으로 들어온다.
-        //블록 파괴 시 ItemSpawnManager에서 무언가 하고 싶으면 여기에 넣으면 된다.  
         SpawnPoint = transform;
         if (SpawnPoint == null)
         {

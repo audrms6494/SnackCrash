@@ -1,6 +1,7 @@
 using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using static Unity.Collections.AllocatorManager;
@@ -18,6 +19,9 @@ public class BlockSpawnManager : MonoBehaviour
 
     public Transform[] SpawnPointForDifficulty;
 
+    //Score 관련 필드
+    public int CuScore = 0;
+    public TextMeshProUGUI Score;
 
     //난이도에 따른 구현
     public void SpawnPattern1()
@@ -104,6 +108,8 @@ public class BlockSpawnManager : MonoBehaviour
     {
         if (Block != null && Blocks.Contains(Block))
         {
+            CuScore += 10;
+            Score.text = CuScore.ToString();
             ItemSpawnManager.CallBlockBreak(Block.transform);
             Blocks.Remove(Block);
             Destroy(Block);
