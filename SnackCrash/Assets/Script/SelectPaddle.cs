@@ -19,7 +19,7 @@ public class SelectPaddle : MonoBehaviour
     public void GameStart()
     {
         string selectedPaddle = PaddleSprites[currentPaddle].name;
-        PlayerPrefs.SetString("SelectedCharacter", selectedPaddle);
+        PlayerPrefs.SetString("SelectedPaddle", selectedPaddle);
     }
 
     private void UpdatePaddleImage()
