@@ -287,6 +287,7 @@ MonoBehaviour:
   SpawnManager_Block: {fileID: 1666811737}
   Clear: {fileID: 120541453}
   GameOver: {fileID: 43258917}
+  FinishedScore: 0
 --- !u!4 &59753073
 Transform:
   m_ObjectHideFlags: 0
@@ -1223,6 +1224,7 @@ MonoBehaviour:
   SpawnPointForDifficulty: []
   CuScore: 0
   Score: {fileID: 2078034660}
+  ScoreEffect: {fileID: 2905757457296679013, guid: ff54e7f96eb5a714f98f6bad083bb071, type: 3}
 --- !u!1 &1712037123
 GameObject:
   m_ObjectHideFlags: 0

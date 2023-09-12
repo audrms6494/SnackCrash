@@ -22,7 +22,7 @@ public class BlockSpawnManager : MonoBehaviour
     //Score 관련 필드
     public int CuScore = 0;
     public TextMeshProUGUI Score;
-
+    public GameObject ScoreEffect;
     //난이도에 따른 구현
     public void SpawnPattern1()
     {
@@ -39,13 +39,13 @@ public class BlockSpawnManager : MonoBehaviour
     public void SpawnPattern3()
     {
         SpawnUti(0, 0, 1);
-        SpawnUti(4, 0, 2);
+        SpawnUti(4, 0, 1);
         SpawnUti(1, 1, 0);
-        SpawnUti(3, 1, 1 );
+        SpawnUti(3, 1, 1) ;
         SpawnUti(2, 2, 0);
-        SpawnUti(1, 3, 2);
+        SpawnUti(1, 3, 1);
         SpawnUti(3, 3, 1);
-        SpawnUti(0, 4, 2);
+        SpawnUti(0, 4, 0);
         SpawnUti(4, 4, 1);
     }
 
@@ -110,6 +110,8 @@ public class BlockSpawnManager : MonoBehaviour
         {
             CuScore += 10;
             Score.text = CuScore.ToString();
+            GameObject Effect= Instantiate(ScoreEffect, Block.transform.position, Quaternion.identity);
+            Destroy(Effect, 0.5f);
             ItemSpawnManager.CallBlockBreak(Block.transform);
             Blocks.Remove(Block);
             Destroy(Block);
