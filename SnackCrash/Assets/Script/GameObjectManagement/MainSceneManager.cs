@@ -54,7 +54,6 @@ public class MainSceneManager : MonoBehaviour
     }
     public void CheckGameOver(bool ballisZero)
     {
-        //공은 0 개 일때 게임오버
         if (ballisZero && !clear)
         {
             GameOver.SetActive(true);
@@ -66,7 +65,6 @@ public class MainSceneManager : MonoBehaviour
         //블록은 0 개 일때 게임 클리어
         if (blockisZero)
         {
-         
             clear=true;
             int stageLevel = PlayerPrefs.GetInt("stageLevel");
             Clear.SetActive(true);
