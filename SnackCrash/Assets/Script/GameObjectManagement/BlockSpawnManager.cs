@@ -12,6 +12,7 @@ public class BlockSpawnManager : MonoBehaviour
     public ItemSpawnManager ItemSpawnManager;
     public List<GameObject> Blocks;
     public GameObject BlockPrefab;
+   
     public Transform Spawnpoint_Block;
     public Sprite[] Colors; // 색상 배열로 변경
     private int colorIndex = -1; // 현재 색상 인덱스
