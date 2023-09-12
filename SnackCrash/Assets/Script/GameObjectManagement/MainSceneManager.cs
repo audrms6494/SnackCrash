@@ -65,12 +65,14 @@ public class MainSceneManager : MonoBehaviour
         //블록은 0 개 일때 게임 클리어
         if (blockisZero)
         {
+            // 현재 스테이지 클리어 완료
             clear=true;
-            int stageLevel = PlayerPrefs.GetInt("stageLevel");
+            int stageLevel = PlayerPrefs.GetInt("stageLevel"); // 현재까지 열린 stagelevel 확인
             Clear.SetActive(true);
-            if (CuStage>stageLevel)
+
+            if (CuStage == stageLevel) // 만약 현재까지 열린 stagelevel중 가장 어려운 난이도를 깼다면 ( Current stage는 stagelevel을 넘을 수 없으므로 등호)
             {
-                PlayerPrefs.SetInt("stageLevel", CuStage);
+                PlayerPrefs.SetInt("stageLevel", CuStage + 1); // 다음 스테이지 오픈!
             }
             Debug.Log("GameClear");
             FinishedScore = SpawnManager_Block.CuScore;
