@@ -11,6 +11,5 @@ public class AttackItem : MonoBehaviour
         GameObject explosion = Instantiate(Effect,transform.position, Quaternion.identity);
         Destroy(explosion, 2.0f);
         Destroy(this.gameObject);
-
     }
 }

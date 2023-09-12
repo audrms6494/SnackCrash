@@ -23,6 +23,7 @@ public class ItemSpawnManager : MonoBehaviour
     {
         GameObject item= Instantiate(ItemPrefabs[ItemIndex], transform.position, Quaternion.identity);
         item.GetComponent<Item>().SetAll(PdManager, PaddlePrefabs[PaddleIndex]);
+        Destroy(item, 3.0f);
     }
     //count에 따라 어떤 아이템 스폰할 지 선택
     public void CalSpawn()
