@@ -10,11 +10,6 @@ public class BallSpawnManager : MonoBehaviour
     public Transform SpawnPoint_Ball;
     public bool BallisZero=false;
    
-    void Start()
-    {
-       
-    }
-
     public void SpawnBall_velocity()
     {
         BallisZero = false;
@@ -24,7 +19,13 @@ public class BallSpawnManager : MonoBehaviour
     public void SpawnBall()
     {
         BallisZero = false;
-        GameObject ball = Instantiate(BallPrefab[0], SpawnPoint_Ball.position, Quaternion.identity);
+        GameObject ball = Instantiate(BallPrefab[1], SpawnPoint_Ball.position, Quaternion.identity);
+        Balls.Add(ball);
+    }
+    public void SpawnBall(Transform transform)
+    {
+        BallisZero = false;
+        GameObject ball = Instantiate(BallPrefab[1], transform.position, Quaternion.identity);
         Balls.Add(ball);
     }
     public bool CheckBalIisZero()

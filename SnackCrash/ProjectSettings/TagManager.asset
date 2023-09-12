@@ -15,6 +15,7 @@ TagManager:
   - Paddle_Low
   - Paddle_High
   - Paddle_Mid
+  - Shock
   layers:
   - Default
   - TransparentFX
@@ -27,7 +28,7 @@ TagManager:
   - Block
   - Wall
   - Item
-  - 
+  - Effect
   - 
   - 
   - 

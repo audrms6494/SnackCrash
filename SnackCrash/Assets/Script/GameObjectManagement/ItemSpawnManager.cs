@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro.EditorUtilities;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -7,7 +8,9 @@ public class ItemSpawnManager : MonoBehaviour
 {
    public GameObject[] ItemPrefabs;
    public GameObject[] PaddlePrefabs;
+   public GameObject[] BallItemPrefabs;
    public PaddleSpawnManager PdManager;
+   public BallSpawnManager BSManager;
    private Transform SpawnPoint;
 
    private int count;
@@ -23,6 +26,13 @@ public class ItemSpawnManager : MonoBehaviour
     {
         GameObject item= Instantiate(ItemPrefabs[ItemIndex], transform.position, Quaternion.identity);
         item.GetComponent<Item>().SetAll(PdManager, PaddlePrefabs[PaddleIndex]);
+        Destroy(item, 3.0f);
+    }
+
+    public void SpawnBallItem(Transform transform)
+    {
+        GameObject item = Instantiate(BallItemPrefabs[0], transform.position, Quaternion.identity);
+        item.GetComponent<BallItem>().SetManager(BSManager);
     }
     //count에 따라 어떤 아이템 스폰할 지 선택
     public void CalSpawn()
@@ -40,6 +50,7 @@ public class ItemSpawnManager : MonoBehaviour
         {
             SpawnPaddleItem(1,2, SpawnPoint);
         }
+        if(count ==2 ||count ==5)  SpawnBallItem(SpawnPoint);
     }
  
    public void CallBlockBreak(Transform transform)
