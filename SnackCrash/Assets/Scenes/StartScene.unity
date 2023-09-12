@@ -240,8 +240,9 @@ GameObject:
   - component: {fileID: 273136408}
   - component: {fileID: 273136410}
   - component: {fileID: 273136409}
+  - component: {fileID: 273136411}
   m_Layer: 5
-  m_Name: JellyBear (1)
+  m_Name: JellyBear2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -305,6 +306,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 273136407}
   m_CullTransparentMesh: 1
+--- !u!95 &273136411
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 273136407}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a8b16f16929a2b4408254bbd3b4f36c9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &296033738
 GameObject:
   m_ObjectHideFlags: 0
@@ -317,7 +339,7 @@ GameObject:
   - component: {fileID: 296033741}
   - component: {fileID: 296033740}
   m_Layer: 5
-  m_Name: ChocolateTree (1)
+  m_Name: ChocolateTree2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -439,10 +461,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Start
+  m_text: "\uC2DC\uC791"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8226d2073743048beab19a40d81fd5d9, type: 2}
+  m_sharedMaterial: {fileID: -6653011817403871362, guid: 8226d2073743048beab19a40d81fd5d9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -604,7 +626,7 @@ GameObject:
   - component: {fileID: 372301400}
   - component: {fileID: 372301399}
   m_Layer: 5
-  m_Name: JellyTree (1)
+  m_Name: JellyTree2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -983,7 +1005,7 @@ GameObject:
   - component: {fileID: 521029072}
   - component: {fileID: 521029071}
   m_Layer: 5
-  m_Name: Ground
+  m_Name: Ground1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1059,7 +1081,7 @@ GameObject:
   - component: {fileID: 529871660}
   - component: {fileID: 529871659}
   m_Layer: 5
-  m_Name: Ground (4)
+  m_Name: Ground5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1135,7 +1157,7 @@ GameObject:
   - component: {fileID: 554670259}
   - component: {fileID: 554670258}
   m_Layer: 5
-  m_Name: Cloud1 (2)
+  m_Name: Cloud3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1158,7 +1180,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 300, y: -100}
+  m_AnchoredPosition: {x: 375, y: -175}
   m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &554670258
@@ -1211,7 +1233,7 @@ GameObject:
   - component: {fileID: 646516584}
   - component: {fileID: 646516583}
   m_Layer: 5
-  m_Name: Ground (2)
+  m_Name: Ground3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1534,7 +1556,7 @@ GameObject:
   - component: {fileID: 688810698}
   - component: {fileID: 688810697}
   m_Layer: 5
-  m_Name: Cloud1 (1)
+  m_Name: Cloud2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1610,7 +1632,7 @@ GameObject:
   - component: {fileID: 691283900}
   - component: {fileID: 691283899}
   m_Layer: 5
-  m_Name: Ground (1)
+  m_Name: Ground2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2131,6 +2153,7 @@ GameObject:
   - component: {fileID: 1153659399}
   - component: {fileID: 1153659401}
   - component: {fileID: 1153659400}
+  - component: {fileID: 1153659402}
   m_Layer: 5
   m_Name: Cloud1
   m_TagString: Untagged
@@ -2196,6 +2219,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1153659398}
   m_CullTransparentMesh: 1
+--- !u!95 &1153659402
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1153659398}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6fb56f622c381a846acde9aab5481646, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1181931491
 GameObject:
   m_ObjectHideFlags: 0
@@ -2208,7 +2252,7 @@ GameObject:
   - component: {fileID: 1181931494}
   - component: {fileID: 1181931493}
   m_Layer: 5
-  m_Name: Ground (3)
+  m_Name: Ground4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2511,8 +2555,9 @@ GameObject:
   - component: {fileID: 1335055361}
   - component: {fileID: 1335055363}
   - component: {fileID: 1335055362}
+  - component: {fileID: 1335055364}
   m_Layer: 5
-  m_Name: Cloud1 (3)
+  m_Name: Cloud4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2576,6 +2621,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1335055360}
   m_CullTransparentMesh: 1
+--- !u!95 &1335055364
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1335055360}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 635647d701dfd654c87eda277b5b10c8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1510425491
 GameObject:
   m_ObjectHideFlags: 0
@@ -2883,16 +2949,16 @@ RectTransform:
   m_Children:
   - {fileID: 358869215}
   - {fileID: 983488560}
+  - {fileID: 1153659399}
+  - {fileID: 688810696}
+  - {fileID: 554670257}
+  - {fileID: 1335055361}
   - {fileID: 718039382}
   - {fileID: 1884209784}
   - {fileID: 1228721624}
   - {fileID: 372301398}
   - {fileID: 1286786391}
   - {fileID: 296033739}
-  - {fileID: 1153659399}
-  - {fileID: 688810696}
-  - {fileID: 554670257}
-  - {fileID: 1335055361}
   - {fileID: 521029070}
   - {fileID: 691283898}
   - {fileID: 646516582}
@@ -2924,7 +2990,7 @@ GameObject:
   - component: {fileID: 1884209786}
   - component: {fileID: 1884209785}
   m_Layer: 5
-  m_Name: Donut (1)
+  m_Name: Donut2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3181,8 +3247,9 @@ GameObject:
   - component: {fileID: 1930840667}
   - component: {fileID: 1930840669}
   - component: {fileID: 1930840668}
+  - component: {fileID: 1930840670}
   m_Layer: 0
-  m_Name: JellyBear
+  m_Name: JellyBear1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3195,14 +3262,14 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1930840666}
-  m_LocalRotation: {x: -0, y: 0, z: -0.34201995, w: -0.93969274}
+  m_LocalRotation: {x: 0, y: 0, z: 0.3420201, w: 0.9396927}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1551736877}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 400}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 40}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 300, y: 0}
@@ -3246,6 +3313,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1930840666}
   m_CullTransparentMesh: 1
+--- !u!95 &1930840670
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930840666}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 92cea32a567d53948a9a8b3212ef6f26, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2008400241
 GameObject:
   m_ObjectHideFlags: 0
