@@ -12,7 +12,7 @@ public class BallSpawnManager : MonoBehaviour
    
     void Start()
     {
-        SpawnBall();
+       
     }
 
     public void SpawnBall_velocity()
