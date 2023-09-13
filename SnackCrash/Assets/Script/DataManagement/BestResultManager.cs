@@ -7,8 +7,9 @@ public class BestResultManager : MonoBehaviour
 {
     private string keyValue;
     private string[] difficultyArr = new string[] { "Easy", "Normal", "Hard" };
-    private string[] nameArr = new string[] { "Andy", "Billy", "Charlie" };
+    private string[] nameArr = new string[] { "½Ò¹ä", "Äá¹ä", "Çö¹Ì¹ä" };
     public int difficulty;
+    public bool isName;
 
     [SerializeField] private TMP_Text first;
     [SerializeField] private TMP_Text second;
@@ -34,54 +35,108 @@ public class BestResultManager : MonoBehaviour
             }
             PlayerPrefs.SetString("Start", "StartComplete");
         }
-
-        if (difficulty == 1)
+        if (isName == true)
         {
-            WriteEasyResult();
+            if (difficulty == 1)
+            {
+                WriteEasyResultName();
+            }
+
+            else if (difficulty == 2)
+            {
+                WriteNormalResultName();
+            }
+
+            else if (difficulty == 3)
+            {
+                WriteHardResultName();
+            }
+
+            else if (difficulty == 4)
+            {
+                WriteAllResultName();
+            }
         }
 
-        else if (difficulty == 2)
+        if (isName == false)
         {
-            WriteNormalResult();
+            if (difficulty == 1)
+            {
+                WriteEasyResultScore();
+            }
+
+            else if (difficulty == 2)
+            {
+                WriteNormalResultScore();
+            }
+
+            else if (difficulty == 3)
+            {
+                WriteHardResultScore();
+            }
+
+            else if (difficulty == 4)
+            {
+                WriteAllResultScore();
+            }
         }
 
-        else if (difficulty == 3)
-        {
-            WriteHardResult();
-        }
-
-        else if (difficulty == 4)
-        {
-            WriteAllResult();
-        }
     }
 
 
-    public void WriteEasyResult()
+    public void WriteEasyResultName()
     {
-        first.text = "1st) " + PlayerPrefs.GetString("Easy1Name") + "\t" + PlayerPrefs.GetInt("Easy1Score");
-        second.text = "2nd) " + PlayerPrefs.GetString("Easy2Name") + "\t" + PlayerPrefs.GetInt("Easy2Score");
-        third.text = "3rd) " + PlayerPrefs.GetString("Easy3Name") + "\t" + PlayerPrefs.GetInt("Easy3Score");
+        first.text = PlayerPrefs.GetString("Easy1Name");
+        second.text = PlayerPrefs.GetString("Easy2Name");
+        third.text = PlayerPrefs.GetString("Easy3Name");
     }
 
-    public void WriteNormalResult()
+    public void WriteEasyResultScore()
     {
-        first.text = "1st) " + PlayerPrefs.GetString("Normal1Name") + "\t" + PlayerPrefs.GetInt("Normal1Score");
-        second.text = "2nd) " + PlayerPrefs.GetString("Normal2Name") + "\t" + PlayerPrefs.GetInt("Normal2Score");
-        third.text = "3rd) " + PlayerPrefs.GetString("Normal3Name") + "\t" + PlayerPrefs.GetInt("Normal3Score");
+        first.text = PlayerPrefs.GetInt("Easy1Score").ToString();
+        second.text = PlayerPrefs.GetInt("Easy2Score").ToString();
+        third.text = PlayerPrefs.GetInt("Easy3Score").ToString();
     }
 
-    public void WriteHardResult()
+    public void WriteNormalResultName()
     {
-        first.text = "1st) " + PlayerPrefs.GetString("Hard1Name") + "\t" + PlayerPrefs.GetInt("Hard1Score");
-        second.text = "2nd) " + PlayerPrefs.GetString("Hard2Name") + "\t" + PlayerPrefs.GetInt("Hard2Score");
-        third.text = "3rd) " + PlayerPrefs.GetString("Hard3Name") + "\t" + PlayerPrefs.GetInt("Hard3Score");
+        first.text = PlayerPrefs.GetString("Normal1Name");
+        second.text = PlayerPrefs.GetString("Normal2Name");
+        third.text = PlayerPrefs.GetString("Normal3Name");
     }
 
-    public void WriteAllResult()
+    public void WriteNormalResultScore()
     {
-        first.text = "Easy " + PlayerPrefs.GetString("Easy1Name") + "\t" + PlayerPrefs.GetInt("Easy1Score");
-        second.text = "Normal " + PlayerPrefs.GetString("Normal1Name") + "\t" + PlayerPrefs.GetInt("Normal1Score");
-        third.text = "Hard  " + PlayerPrefs.GetString("Hard1Name") + "\t" + PlayerPrefs.GetInt("Hard1Score");
+        first.text = PlayerPrefs.GetInt("Normal1Score").ToString();
+        second.text = PlayerPrefs.GetInt("Normal2Score").ToString();
+        third.text = PlayerPrefs.GetInt("Normal3Score").ToString();
+    }
+
+    public void WriteHardResultName()
+    {
+        first.text = PlayerPrefs.GetString("Hard1Name");
+        second.text = PlayerPrefs.GetString("Hard2Name");
+        third.text = PlayerPrefs.GetString("Hard3Name");
+    }
+
+    public void WriteHardResultScore()
+    {
+        first.text = PlayerPrefs.GetInt("Hard1Score").ToString();
+        second.text = PlayerPrefs.GetInt("Hard2Score").ToString();
+        third.text = PlayerPrefs.GetInt("Hard3Score").ToString();
+    }
+
+    public void WriteAllResultName()
+    {
+        first.text = PlayerPrefs.GetString("Easy1Name");
+        second.text = PlayerPrefs.GetString("Normal1Name");
+        third.text = PlayerPrefs.GetString("Hard1Name");
+    }
+
+    public void WriteAllResultScore()
+    {
+        first.text = PlayerPrefs.GetInt("Easy1Score").ToString();
+        second.text = PlayerPrefs.GetInt("Normal1Score").ToString();
+        third.text = PlayerPrefs.GetInt("Hard1Score").ToString();
     }
 }
