@@ -141,7 +141,7 @@ GameObject:
   - component: {fileID: 2484754737569216298}
   - component: {fileID: 5945368895071516238}
   m_Layer: 0
-  m_Name: Paddle_Penalty
+  m_Name: Paddle_Bowl_Penalty
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

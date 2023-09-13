@@ -165,7 +165,7 @@ GameObject:
   - component: {fileID: 7221368845440547651}
   - component: {fileID: 153521093566946346}
   m_Layer: 6
-  m_Name: Paddle_Long
+  m_Name: Paddle_Bowl_Long
   m_TagString: Paddle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -180,7 +180,7 @@ Transform:
   m_GameObject: {fileID: 3239596755549106379}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.2205, y: -3.0366, z: 0}
-  m_LocalScale: {x: 2.5, y: 0.2, z: 1}
+  m_LocalScale: {x: 2.5, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1811378948068409078}
