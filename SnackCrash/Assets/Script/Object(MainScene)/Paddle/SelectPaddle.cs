@@ -6,25 +6,29 @@ using UnityEngine.SceneManagement;
 
 public class SelectPaddle : MonoBehaviour
 {
-    public Image PaddleImage;
-    public Sprite[] PaddleSprites;
-    private int currentPaddle = 0;  
-     
-    public void selectPaddle()
-    {
-        currentPaddle = (currentPaddle + 1) % PaddleSprites.Length;
-        UpdatePaddleImage();
-    }
+    public Sprite dish;
+    public Sprite bowl;
+    Image thisImg;
 
-    public void GameStart()
+    private void Start()
     {
-        string selectedPaddle = PaddleSprites[currentPaddle].name;
-        PlayerPrefs.SetString("SelectedPaddle", selectedPaddle);
+        PlayerPrefs.SetInt("PlayerDish", 1);
+        thisImg = GetComponent<Image>();
+        thisImg.sprite = dish;
     }
-
-    private void UpdatePaddleImage()
+    public void ChangePaddle()
     {
-        PaddleImage.sprite = PaddleSprites[currentPaddle];
+        if (PlayerPrefs.GetInt("PlayerDish") == 1)
+        {
+            PlayerPrefs.SetInt("PlayerDish", 2);
+            thisImg.sprite = bowl;
+        }
+
+        else if (PlayerPrefs.GetInt("PlayerDish") == 2)
+        {
+            PlayerPrefs.SetInt("PlayerDish", 1);
+            thisImg.sprite = dish;
+        }
     }
 
 }

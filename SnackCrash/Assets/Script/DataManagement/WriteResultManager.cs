@@ -13,7 +13,8 @@ public class WriteResultManager : MonoBehaviour
 
     // PlayerPrefs key value 생성
     private int playerLevel;
-    private string opponentKey;
+    private string opponentName;
+    private string opponentScore;
     private string difficulty;
 
     private string tempKey1;
@@ -43,8 +44,9 @@ public class WriteResultManager : MonoBehaviour
         playerName = playerNameInput.text;
         for (int i = 1; i <= 3; i++)
         {
-            opponentKey = difficulty + i.ToString() + "Name";
-            if (currentScore > PlayerPrefs.GetInt(opponentKey))
+            opponentName = difficulty + i.ToString() + "Name";
+            opponentScore = difficulty + i.ToString() + "Score";
+            if (currentScore > PlayerPrefs.GetInt(opponentScore))
             {
                 for (int j = 3; j > i; j--)
                 {
@@ -57,9 +59,8 @@ public class WriteResultManager : MonoBehaviour
                     tempScore = PlayerPrefs.GetInt(tempKey2);
                     PlayerPrefs.SetInt(tempKey1, tempScore);
                 }
-                PlayerPrefs.SetString(opponentKey, playerName);
-                opponentKey = difficulty + i.ToString() + "Score";
-                PlayerPrefs.SetInt(opponentKey, currentScore);
+                PlayerPrefs.SetString(opponentName, playerName);
+                PlayerPrefs.SetInt(opponentScore, currentScore);
                 break; // 기입완료 및 탈출
             }
         }

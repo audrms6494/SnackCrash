@@ -3711,7 +3711,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d98f6494c2412455184b9ddbd9a4982a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 79e01293c90b04db0b661c8cfb4923aa, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3741,10 +3741,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 110cd67492cb642a8bfa2b50f38ca9be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PaddleImage: {fileID: 1904922055}
-  PaddleSprites:
-  - {fileID: 21300000, guid: b49d0e20a631542448c38ec67259d323, type: 3}
-  - {fileID: 21300000, guid: a6dfc8945f8cd412b892223564b2b5bd, type: 3}
+  dish: {fileID: 21300000, guid: 79e01293c90b04db0b661c8cfb4923aa, type: 3}
+  bowl: {fileID: 21300000, guid: e9a0ec7ec7bf94b1989e54d1627ed8ad, type: 3}
 --- !u!114 &1904922058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3791,7 +3789,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1904922057}
         m_TargetAssemblyTypeName: SelectPaddle, Assembly-CSharp
-        m_MethodName: selectPaddle
+        m_MethodName: ChangePaddle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

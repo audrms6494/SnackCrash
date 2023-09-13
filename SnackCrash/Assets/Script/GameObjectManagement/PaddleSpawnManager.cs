@@ -5,10 +5,12 @@ using UnityEngine.UIElements;
 
 public class PaddleSpawnManager : MonoBehaviour
 {
-    public GameObject PaddlePrefab;
+    public GameObject PaddlePrefabBowl;
+    public GameObject PaddlePrefabDish;
     public Transform SpawnPoint_Paddle;
     public Queue<GameObject> Paddle;
-
+    public Cloud_Spear_System EnemyScript;
+    public GameObject Enemy;
     void Start()
     {
         Paddle = new Queue<GameObject>(); // 큐 초기화
@@ -25,8 +27,19 @@ public class PaddleSpawnManager : MonoBehaviour
         }
 
         // 새 패들 생성 및 큐에 추가
-        GameObject newPaddle = Instantiate(PaddlePrefab, SpawnPoint_Paddle.position, Quaternion.identity);
-        Paddle.Enqueue(newPaddle);
+        // -- 송명근 PlayerDish에 따라 가져오는 Prefab 변경
+        if (PlayerPrefs.GetInt("PlayerDish") == 1)
+        {
+            GameObject newPaddle = Instantiate(PaddlePrefabDish, SpawnPoint_Paddle.position, Quaternion.identity);
+            Paddle.Enqueue(newPaddle);
+        }
+
+        else if (PlayerPrefs.GetInt("PlayerDish") == 2)
+        {
+            GameObject newPaddle = Instantiate(PaddlePrefabBowl, SpawnPoint_Paddle.position, Quaternion.identity);
+            Paddle.Enqueue(newPaddle);
+        }
+        
     }
     public void SpawnPaddle(GameObject InputPaddle)
     {
@@ -42,5 +55,17 @@ public class PaddleSpawnManager : MonoBehaviour
         // 새 패들 생성 및 큐에 추가
         GameObject newPaddle = Instantiate(InputPaddle, new Vector3(x,-4,0), Quaternion.identity);
         Paddle.Enqueue(newPaddle);
+    }
+
+    public void SpawnEnemy()
+    {
+        GameObject enemy = Instantiate(Enemy);
+        EnemyScript=enemy.GetComponent<Cloud_Spear_System>();
+        EnemyScript.SetManager(this);
+    }
+
+    public void SpawnPaddleDelay(float delay)
+    {
+        Invoke(nameof(SpawnPaddle), delay);
     }
 }
