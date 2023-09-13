@@ -1159,7 +1159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PaddlePrefabBowl: {fileID: 3239596755549106379, guid: 3abb46963667a5843a7c797cf8043d44, type: 3}
-  PaddlePrefabDish: {fileID: 7748839765282356634, guid: 2d8bd3d765fd8b74aa70d323d049139f, type: 3}
+  PaddlePrefabDish: {fileID: 3239596755549106379, guid: 451b6bf951c3cfc4285fd9980ed64255, type: 3}
   SpawnPoint_Paddle: {fileID: 1363399165}
   EnemyScript: {fileID: 3876301861485056831, guid: c4ab6f6d13732b04c8d6f877d3ab94c5, type: 3}
   Enemy: {fileID: 6136734848122480907, guid: c4ab6f6d13732b04c8d6f877d3ab94c5, type: 3}
