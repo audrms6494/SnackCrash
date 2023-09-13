@@ -42,15 +42,15 @@ public class ItemSpawnManager : MonoBehaviour
             Debug.Log("SpawnPoint == null");
             return;
         }
-        if(count %5 == 0)
+        if(count %7==0)
         {
             SpawnPaddleItem(0,1, SpawnPoint);
         }
-        if(count %3== 0)
+        if(count %5== 0)
         {
             SpawnPaddleItem(1,2, SpawnPoint);
         }
-        if(count ==2 ||count ==5)  SpawnBallItem(SpawnPoint);
+        if(count %4==0)  SpawnBallItem(SpawnPoint);
     }
  
    public void CallBlockBreak(Transform transform)

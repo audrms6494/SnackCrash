@@ -4,25 +4,41 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    private Rigidbody2D rb;
+    public Animator animator;
     public BlockSpawnManager BsManager;
     public float AttackDelay;
     public float time;
     public int AttackCount;
+    public bool isDead;
     private void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
         time = 0;
         AttackCount = 0;
+        isDead = false;
+        animator=GetComponent<Animator>();
     }
     private void Update()
     {
-        time += Time.deltaTime;
-        if(time > AttackDelay)
+        if (!isDead)
         {
-            time = 0;
-            BsManager.SpawnBricksWidth(0,AttackCount);
-            AttackCount++;
+            time += Time.deltaTime;
+            if (time > AttackDelay)
+            {
+                time = 0;
+                BsManager.SpawnBricksWidth(0, AttackCount);
+                AttackCount++;
+            }
         }
+    }
+    public void Dead()
+    {
+        isDead = true;
+        animator.SetTrigger("Dead");
+        Destroy(this.gameObject, 1.0f);
+    }
+
+    public void SetBSManager(BlockSpawnManager bsManager)
+    {
+        BsManager = bsManager;
     }
 }
