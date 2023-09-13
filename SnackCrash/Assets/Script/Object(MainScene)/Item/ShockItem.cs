@@ -31,6 +31,7 @@ public class ShockItem : MonoBehaviour
             {
                 PSManager.SpawnPaddle(PenaltyPaddle);
                 PSManager.SpawnPaddleDelay(1.0f);
+                Destroy(this.gameObject);
             }
             else
             {
