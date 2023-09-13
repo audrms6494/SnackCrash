@@ -5479,9 +5479,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2056608535}
         m_TargetAssemblyTypeName: BestResultManager, Assembly-CSharp
-        m_MethodName: WriteEasyResult
+        m_MethodName: WriteEasyResultName
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5491,9 +5491,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2056608534}
         m_TargetAssemblyTypeName: BestResultManager, Assembly-CSharp
-        m_MethodName: WriteNormalResult
+        m_MethodName: WriteEasyResultScore
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5503,9 +5503,45 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 642872355}
         m_TargetAssemblyTypeName: BestResultManager, Assembly-CSharp
-        m_MethodName: WriteHardResult
+        m_MethodName: WriteNormalResultName
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 642872354}
+        m_TargetAssemblyTypeName: BestResultManager, Assembly-CSharp
+        m_MethodName: WriteNormalResultScore
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 722208689}
+        m_TargetAssemblyTypeName: BestResultManager, Assembly-CSharp
+        m_MethodName: WriteHardResultName
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 722208690}
+        m_TargetAssemblyTypeName: BestResultManager, Assembly-CSharp
+        m_MethodName: WriteHardResultScore
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
