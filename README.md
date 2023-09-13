@@ -1,4 +1,5 @@
 # SnackCrash
  Snack Crash!
 
-![5277847](https://github.com/Hwan007/TextRPGing/assets/141597722/ff3bb020-aac1-4845-a27a-3f02153a3b58)
+
+![5277847](https://github.com/audrms6494/SnackCrash/assets/141597722/01ee2887-45a0-4fd9-8ee6-21c767f86d4b)
