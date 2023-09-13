@@ -3656,9 +3656,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1438665672}
+      - m_Target: {fileID: 218299711}
         m_TargetAssemblyTypeName: StageManager, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: SetDifficultyEasy
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

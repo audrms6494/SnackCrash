@@ -6,6 +6,7 @@ public class MainSceneManager : MonoBehaviour
 {
     public BallSpawnManager SpawnManager_Ball;
     public BlockSpawnManager SpawnManager_Block;
+    public EnemySpawnManager SpawnManager_Enemy;
     public GameObject Clear;
     public GameObject GameOver;
     public GameObject ClearEffect;
@@ -45,6 +46,7 @@ public class MainSceneManager : MonoBehaviour
                 case 3:
                     SpawnManager_Block.SpawnPattern3();
                     SpawnManager_Ball.SpawnBall_velocity();
+                    SpawnManager_Enemy.SpawnEnemy();
                     break;
                 default: 
                     break;
@@ -72,7 +74,10 @@ public class MainSceneManager : MonoBehaviour
         //블록은 0 개 일때 게임 클리어
         if (blockisZero)
         {
+            //적 파괴
+            SpawnManager_Enemy.DestroyEnemy();
             Instantiate(ClearEffect);
+          
             // 현재 스테이지 클리어 완료
             clear=true;
             int stageLevel = PlayerPrefs.GetInt("stageLevel"); // 현재까지 열린 stagelevel 확인
