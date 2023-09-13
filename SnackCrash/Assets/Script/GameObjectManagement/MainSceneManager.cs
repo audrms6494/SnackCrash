@@ -8,6 +8,7 @@ public class MainSceneManager : MonoBehaviour
     public BallSpawnManager SpawnManager_Ball;
     public BlockSpawnManager SpawnManager_Block;
     public EnemySpawnManager SpawnManager_Enemy;
+    public PaddleSpawnManager SpawnManager_Paddle;
     public GameObject Clear;
     public GameObject GameOver;
     public GameObject ClearEffect;
@@ -46,6 +47,7 @@ public class MainSceneManager : MonoBehaviour
                 case 2:
                     SpawnManager_Block.SpawnPattern2();
                     SpawnManager_Ball.SpawnBall_velocity();
+                    SpawnManager_Paddle.SpawnEnemy();
                     break; 
                 case 3:
                     SpawnManager_Block.SpawnPattern3();

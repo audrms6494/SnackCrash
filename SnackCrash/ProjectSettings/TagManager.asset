@@ -16,6 +16,8 @@ TagManager:
   - Paddle_High
   - Paddle_Mid
   - Shock
+  - Player1
+  - Enemy
   layers:
   - Default
   - TransparentFX

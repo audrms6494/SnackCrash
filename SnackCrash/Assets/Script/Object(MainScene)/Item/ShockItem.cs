@@ -6,20 +6,55 @@ public class ShockItem : MonoBehaviour
 {
     public PaddleSpawnManager PSManager;
     public GameObject PenaltyPaddle;
+    public Rigidbody2D rb;
+
+    private bool hasCollided = false;
+
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
+
+    private void Start()
+    {
+        StartCoroutine(DropAfterDelay(1.0f)); // 1초 후에 떨어지도록 함
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (hasCollided) return; // 이미 충돌 처리를 한 경우 더 이상 처리하지 않음
+
         if (collision.gameObject.CompareTag("Paddle") || collision.gameObject.CompareTag("Paddle_Low") || collision.gameObject.CompareTag("Paddle_Mid") || collision.gameObject.CompareTag("Paddle_High"))
         {
-            if(PSManager != null&&PenaltyPaddle != null)
+            hasCollided = true;
+
+            if (PSManager != null && PenaltyPaddle != null)
             {
                 PSManager.SpawnPaddle(PenaltyPaddle);
+              
             }
             else
             {
-                Debug.Log("PSManager == null Or PenaltyPaddle == null");
+                if (PSManager != null)
+                {
+                    Debug.Log("PSManager == null");
+                }
+                if (PenaltyPaddle == null)
+                {
+                    Debug.Log("PenaltyPaddle == null");
+                }
             }
-
-            Destroy(this.gameObject);
         }
+    }
+
+    public void SetManager(PaddleSpawnManager manager)
+    {
+        PSManager = manager;
+    }
+
+    private IEnumerator DropAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        rb.gravityScale = 1.0f;
     }
 }

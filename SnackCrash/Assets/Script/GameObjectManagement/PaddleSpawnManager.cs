@@ -8,7 +8,8 @@ public class PaddleSpawnManager : MonoBehaviour
     public GameObject PaddlePrefab;
     public Transform SpawnPoint_Paddle;
     public Queue<GameObject> Paddle;
-
+    public Cloud_Spear_System EnemyScript;
+    public GameObject Enemy;
     void Start()
     {
         Paddle = new Queue<GameObject>(); // 큐 초기화
@@ -42,5 +43,17 @@ public class PaddleSpawnManager : MonoBehaviour
         // 새 패들 생성 및 큐에 추가
         GameObject newPaddle = Instantiate(InputPaddle, new Vector3(x,-4,0), Quaternion.identity);
         Paddle.Enqueue(newPaddle);
+    }
+
+    public void SpawnEnemy()
+    {
+        GameObject enemy = Instantiate(Enemy);
+        EnemyScript=enemy.GetComponent<Cloud_Spear_System>();
+        EnemyScript.SetManager(this);
+    }
+
+    public void SpawnPaddleDelay(float delay)
+    {
+        Invoke(nameof(SpawnPaddle), delay);
     }
 }
