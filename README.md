@@ -63,6 +63,10 @@ draw.io를 이용한 와이어프레임 기획서 작성
 
 <br/>
 
+## Scene 상세 설명
+- StartScene
+  ![스크린샷 2023-09-13 200155](https://github.com/audrms6494/SnackCrash/assets/141597722/b1fdd9b8-1709-4d35-a2ab-04881d2fdab0)
+
 ## 주요 구현 기능과 적용 기술
 - PlayerPrefs : 플레이어와 스테이지 레벨, 획득 점수의 관리
 - 옵션 UI : 배경음악 음소거, 게임 데이터 초기화
