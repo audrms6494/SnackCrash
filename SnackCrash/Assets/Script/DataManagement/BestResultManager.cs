@@ -17,7 +17,7 @@ public class BestResultManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // PlayerPrefs.DeleteAll();
+        // PlayerPrefs.DeleteKey("Start");
         // 최고점수 초기화
         // 처음 한번만 실행한 뒤 실행 x
         if (!PlayerPrefs.HasKey("Start"))

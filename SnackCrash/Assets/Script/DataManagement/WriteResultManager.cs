@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -8,25 +9,42 @@ public class WriteResultManager : MonoBehaviour
 {
     public TMP_InputField playerNameInput;
     private string playerName = null;
-    private int playerScore = 40; // 받아올 예정
-    // private int playerScore = PlayerPrefs.GetInt("CurrentScore");
+    private int currentScore;
 
     // PlayerPrefs key value 생성
-    private string difficulty = "Easy"; // 받아올 예정
-    // private string difficulty = PlayerPrefs.GetString("playerStage");
+    private int playerLevel;
     private string opponentKey;
+    private string difficulty;
 
     private string tempKey1;
     private string tempKey2;
     private string tempName;
     private int tempScore;
+
+    private void Start()
+    {
+        currentScore = PlayerPrefs.GetInt("CurrentScore");
+        playerLevel = PlayerPrefs.GetInt("playerLevel");
+        switch (playerLevel)
+        {
+            case 1:
+                difficulty = "Easy";
+                break;
+            case 2:
+                difficulty = "Normal";
+                break;
+            case 3:
+                difficulty = "Hard";
+                break;
+        }
+    }
     public void SaveResult()
     {
         playerName = playerNameInput.text;
         for (int i = 1; i <= 3; i++)
         {
             opponentKey = difficulty + i.ToString() + "Name";
-            if (playerScore > PlayerPrefs.GetInt(opponentKey))
+            if (currentScore > PlayerPrefs.GetInt(opponentKey))
             {
                 for (int j = 3; j > i; j--)
                 {
@@ -41,7 +59,7 @@ public class WriteResultManager : MonoBehaviour
                 }
                 PlayerPrefs.SetString(opponentKey, playerName);
                 opponentKey = difficulty + i.ToString() + "Score";
-                PlayerPrefs.SetInt(opponentKey, playerScore);
+                PlayerPrefs.SetInt(opponentKey, currentScore);
                 break; // 기입완료 및 탈출
             }
         }
