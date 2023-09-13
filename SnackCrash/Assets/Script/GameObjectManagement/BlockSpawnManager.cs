@@ -34,8 +34,8 @@ public class BlockSpawnManager : MonoBehaviour
     {
         SpawnBricksHeight(0,5,0,0);
         SpawnBricksHeight(0,5,1,1);
-        SpawnBricksHeight(0,5,2,0);
-        SpawnBricksHeight(0,5,3,1);
+        SpawnBricksHeight(0,5,3,0);
+        SpawnBricksHeight(0,5,4,1);
     }
     public void SpawnPattern3()
     {

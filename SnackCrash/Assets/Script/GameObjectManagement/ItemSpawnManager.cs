@@ -13,6 +13,7 @@ public class ItemSpawnManager : MonoBehaviour
    public BallSpawnManager BSManager;
    private Transform SpawnPoint;
 
+   private int randItem;
    private int count;
 
     private void Start()
@@ -42,15 +43,25 @@ public class ItemSpawnManager : MonoBehaviour
             Debug.Log("SpawnPoint == null");
             return;
         }
-        if(count %7==0)
+        if (count % 4 == 0)
         {
-            SpawnPaddleItem(0,1, SpawnPoint);
+            randItem = Random.Range(0, 3);
+            switch (randItem)
+            {
+                case 0:
+                    SpawnPaddleItem(0, 1, SpawnPoint);
+                    break;
+                case 1:
+                    SpawnPaddleItem(1, 2, SpawnPoint);
+                    break;
+                case 2:
+                    SpawnBallItem(SpawnPoint);
+                    break;
+                default:
+                    break;
+
+            }
         }
-        if(count %5== 0)
-        {
-            SpawnPaddleItem(1,2, SpawnPoint);
-        }
-        if(count %4==0)  SpawnBallItem(SpawnPoint);
     }
  
    public void CallBlockBreak(Transform transform)
