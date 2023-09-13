@@ -58,7 +58,7 @@ draw.io를 이용한 와이어프레임 기획서 작성
 - 함영주
     - Start Scene, Credit Scene 담당
     - Scene간 이동 기능
-    - UI 및 사운드 옵션 기능
+    - UI 및 사운드 옵션 기능 <br/>
 위와 같이 각 Scene마다 역할을 나눠 작업하며, 브랜치 Merge 시 작업 내용의 conflict를 최소화했다.
 
 <br/>
