@@ -27,15 +27,15 @@ public class BlockSpawnManager : MonoBehaviour
     //난이도에 따른 구현
     public void SpawnPattern1()
     {
-        SpawnBricksWidth(0, 5, 1);
-        SpawnBricksWidth(0, 5, 2);
+        SpawnBricksWidth(0, 5, 1, 0);
+        SpawnBricksWidth(0, 5, 2, 1);
     }
     public void SpawnPattern2()
     {
-        SpawnBricksHeight(0,5,0);
-        SpawnBricksHeight(0,5,1);
-        SpawnBricksHeight(0,5,2);
-        SpawnBricksHeight(0,5,3);
+        SpawnBricksHeight(0,5,0,0);
+        SpawnBricksHeight(0,5,1,1);
+        SpawnBricksHeight(0,5,2,0);
+        SpawnBricksHeight(0,5,3,1);
     }
     public void SpawnPattern3()
     {
@@ -55,7 +55,7 @@ public class BlockSpawnManager : MonoBehaviour
     {
         BlockClear = false;
         Vector3 spawnPosition;
-        spawnPosition = Spawnpoint_Block.position + new Vector3(x * 1.1f, y*-0.3f, 0f);
+        spawnPosition = Spawnpoint_Block.position + new Vector3(x * 1.1f, y*-0.6f, 0f);
         GameObject block = Instantiate(BlockPrefab, spawnPosition, Quaternion.identity);
         block.GetComponent<Block>().SetManager(this);
         ChangeBlockColor(block, CIndex);
@@ -67,7 +67,7 @@ public class BlockSpawnManager : MonoBehaviour
     {
         for (int j = start; j < finish; j++)
         {
-            SpawnUti(j, position, 0);
+            SpawnUti(j, position, 1);
         }
     }
     //가로 한 줄
@@ -75,7 +75,15 @@ public class BlockSpawnManager : MonoBehaviour
     {
         for (int j = start; j < 5 ; j++)
         {
-            SpawnUti(j, position, 0);
+            SpawnUti(j, position, 1);
+        }
+    }
+    //가로로 position 위치에 한 줄, Spirte 선택
+    public void SpawnBricksWidth(int start, int finish, int position, int CIndex)
+    {
+        for (int j = start; j < finish; j++)
+        {
+            SpawnUti(j, position, CIndex);
         }
     }
     //세로로 position 위치에 한 줄
@@ -86,6 +94,15 @@ public class BlockSpawnManager : MonoBehaviour
             SpawnUti(position, j, 1);
         }
     }
+    //세로로 position 위치에 한 줄, Spirt 선택
+    public void SpawnBricksHeight(int start, int finish, int position, int CIndex)
+    {
+        for (int j = start; j < finish; j++)
+        {
+            SpawnUti(position, j, CIndex);
+        }
+    }
+
     //세로 한줄
     public void SpawnBricksHeight(int start, int position)
     {
