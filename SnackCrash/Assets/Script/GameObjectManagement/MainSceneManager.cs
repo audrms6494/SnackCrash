@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class MainSceneManager : MonoBehaviour
@@ -13,6 +14,9 @@ public class MainSceneManager : MonoBehaviour
     public int FinishedScore;
     private int CuStage=0;
     private bool clear;
+
+    public TextMeshProUGUI ClearScore;
+    public TextMeshProUGUI GameOverScore;
     private void Start()
     {
         clear = false;
@@ -64,9 +68,11 @@ public class MainSceneManager : MonoBehaviour
             GameOver.SetActive(true);
             Debug.Log("GameOver");
 
+        
             // -- 송명근 게임 오버 됐을 때에도 점수 실행
             FinishedScore = SpawnManager_Block.CuScore;
             PlayerPrefs.SetInt("CurrentScore", FinishedScore);
+            GameOverScore.text=FinishedScore.ToString();
         }
     }
     public void CheckClear(bool blockisZero)
@@ -88,6 +94,7 @@ public class MainSceneManager : MonoBehaviour
             }
             Debug.Log("GameClear");
             FinishedScore = SpawnManager_Block.CuScore;
+            ClearScore.text=FinishedScore.ToString();
             //이 밑에 Score 저장.
             PlayerPrefs.SetInt("CurrentScore", FinishedScore);
         }
