@@ -67,6 +67,16 @@ draw.io를 이용한 와이어프레임 기획서 작성
 ---
 ### StartScene
 ![스크린샷 2023-09-13 212716](https://github.com/audrms6494/SnackCrash/assets/141597722/b1740422-8f01-4a43-8de7-15319b2774f0)
+### SelectScene
+![스크린샷 2023-09-13 213206](https://github.com/audrms6494/SnackCrash/assets/141597722/82bfd966-68e0-422b-9742-841e9c512885)
+### MainScene
+![스크린샷 2023-09-13 213613](https://github.com/audrms6494/SnackCrash/assets/141597722/e0ae92c8-9319-495a-8c06-41ea05f7bff4)
+### ResultScene
+![스크린샷 2023-09-13 214029](https://github.com/audrms6494/SnackCrash/assets/141597722/01c232ff-91ba-40c0-b8b2-303d2fca0ef5)
+### CreditScene
+![스크린샷 2023-09-13 214328](https://github.com/audrms6494/SnackCrash/assets/141597722/a6dabaed-b7fc-4968-b1ef-787ea8180afb)
+
+<br/>
 
 ## 주요 구현 기능과 적용 기술
 - PlayerPrefs : 플레이어와 스테이지 레벨, 획득 점수의 관리
