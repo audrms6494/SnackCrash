@@ -22,9 +22,11 @@
 ## 프로젝트 기획 - 와이어프레임
 ---
 <img width="1254" alt="팀십시일반와이어프레임" src="https://github.com/audrms6494/SnackCrash/assets/141597722/3a7b28a4-d64b-402e-8136-ff28a899fdba">
+
 <br/>
 
 ### 와이어프레임 상세 - 각 Scene의 구성
+
 - Start Scene : 게임의 시작화면으로 난이도 선택화면, 크레딧 화면으로 이동이 가능하고, 배경음악의 on/off 조절, 플레이어 데이터 초기화 기능 버튼이 있다.
 ![스크린샷 2023-09-13 195615](https://github.com/audrms6494/SnackCrash/assets/141597722/a0d850da-802d-46fd-b320-ed7253e2b301)
 
