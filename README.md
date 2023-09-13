@@ -110,6 +110,7 @@ draw.io를 이용한 와이어프레임 기획서 작성
 ## 주요 구현 기능과 적용 기술
 - PlayerPrefs : 플레이어와 스테이지 레벨, 획득 점수의 관리
 - 옵션 UI : 배경음악 음소거, 게임 데이터 초기화
+- MainScene-BallSpawnManager, BlockSpawnManager, PaddleSpawnManager, MainSceneManager : 오브젝트 관리 Manager의 독립성 확보
 - 주요 구현 기능과 적용 기술은 여기서 작성합니다 =====================================================================================
 
 <br/>
