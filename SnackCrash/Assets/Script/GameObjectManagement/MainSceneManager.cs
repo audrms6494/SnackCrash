@@ -8,12 +8,15 @@ public class MainSceneManager : MonoBehaviour
     public BlockSpawnManager SpawnManager_Block;
     public GameObject Clear;
     public GameObject GameOver;
+    public GameObject ClearEffect;
     public int FinishedScore;
     private int CuStage=0;
-    private bool clear = false;
+    private bool clear;
     private void Start()
     {
-        if(SpawnManager_Ball == null)
+        clear = false;
+
+        if (SpawnManager_Ball == null)
         {
             SpawnManager_Ball = GameObject.FindObjectOfType<BallSpawnManager>();
         }
@@ -58,6 +61,10 @@ public class MainSceneManager : MonoBehaviour
         {
             GameOver.SetActive(true);
             Debug.Log("GameOver");
+
+            // -- 송명근 게임 오버 됐을 때에도 점수 실행
+            FinishedScore = SpawnManager_Block.CuScore;
+            PlayerPrefs.SetInt("CurrentScore", FinishedScore);
         }
     }
     public void CheckClear(bool blockisZero)
@@ -65,11 +72,11 @@ public class MainSceneManager : MonoBehaviour
         //블록은 0 개 일때 게임 클리어
         if (blockisZero)
         {
+            Instantiate(ClearEffect);
             // 현재 스테이지 클리어 완료
             clear=true;
             int stageLevel = PlayerPrefs.GetInt("stageLevel"); // 현재까지 열린 stagelevel 확인
             Clear.SetActive(true);
-
             if (CuStage == stageLevel) // 만약 현재까지 열린 stagelevel중 가장 어려운 난이도를 깼다면 ( Current stage는 stagelevel을 넘을 수 없으므로 등호)
             {
                 PlayerPrefs.SetInt("stageLevel", CuStage + 1); // 다음 스테이지 오픈!
