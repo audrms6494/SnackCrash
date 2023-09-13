@@ -5830,7 +5830,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 722208689}
+      - m_Target: {fileID: 722208690}
         m_TargetAssemblyTypeName: BestResultManager, Assembly-CSharp
         m_MethodName: WriteHardResultName
         m_Mode: 1
@@ -5842,7 +5842,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 722208690}
+      - m_Target: {fileID: 722208689}
         m_TargetAssemblyTypeName: BestResultManager, Assembly-CSharp
         m_MethodName: WriteHardResultScore
         m_Mode: 1
