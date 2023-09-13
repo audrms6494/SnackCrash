@@ -25,7 +25,8 @@ public class Enemy : MonoBehaviour
             if (time > AttackDelay)
             {
                 time = 0;
-                BsManager.SpawnBricksWidth(0, AttackCount);
+                if (AttackCount > 13) return;
+                BsManager.SpawnBricksWidth(0, 4, AttackCount,2);
                 AttackCount++;
             }
         }
