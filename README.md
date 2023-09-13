@@ -20,4 +20,7 @@
 
 
 ## 프로젝트 기획 - 와이어프레임
+---
 <img width="1254" alt="팀십시일반와이어프레임" src="https://github.com/audrms6494/SnackCrash/assets/141597722/3a7b28a4-d64b-402e-8136-ff28a899fdba">
+<br/>
+### 와이어프레임 상세
