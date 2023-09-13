@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class MainSceneManager : MonoBehaviour
@@ -7,12 +8,16 @@ public class MainSceneManager : MonoBehaviour
     public BallSpawnManager SpawnManager_Ball;
     public BlockSpawnManager SpawnManager_Block;
     public EnemySpawnManager SpawnManager_Enemy;
+    public PaddleSpawnManager SpawnManager_Paddle;
     public GameObject Clear;
     public GameObject GameOver;
     public GameObject ClearEffect;
     public int FinishedScore;
     private int CuStage=0;
     private bool clear;
+
+    public TextMeshProUGUI ClearScore;
+    public TextMeshProUGUI GameOverScore;
     private void Start()
     {
         clear = false;
@@ -42,6 +47,7 @@ public class MainSceneManager : MonoBehaviour
                 case 2:
                     SpawnManager_Block.SpawnPattern2();
                     SpawnManager_Ball.SpawnBall_velocity();
+                    SpawnManager_Paddle.SpawnEnemy();
                     break; 
                 case 3:
                     SpawnManager_Block.SpawnPattern3();
@@ -64,9 +70,11 @@ public class MainSceneManager : MonoBehaviour
             GameOver.SetActive(true);
             Debug.Log("GameOver");
 
+        
             // -- 송명근 게임 오버 됐을 때에도 점수 실행
             FinishedScore = SpawnManager_Block.CuScore;
             PlayerPrefs.SetInt("CurrentScore", FinishedScore);
+            GameOverScore.text=FinishedScore.ToString();
         }
     }
     public void CheckClear(bool blockisZero)
@@ -88,6 +96,7 @@ public class MainSceneManager : MonoBehaviour
             }
             Debug.Log("GameClear");
             FinishedScore = SpawnManager_Block.CuScore;
+            ClearScore.text=FinishedScore.ToString();
             //이 밑에 Score 저장.
             PlayerPrefs.SetInt("CurrentScore", FinishedScore);
         }
