@@ -1268,7 +1268,7 @@ MonoBehaviour:
   Colors:
   - {fileID: 21300000, guid: 9f4e73b9764657d45b237da82ff905d9, type: 3}
   - {fileID: 21300000, guid: 5b0c67ece4f825347a866bac38310664, type: 3}
-  - {fileID: 21300000, guid: 9f4e73b9764657d45b237da82ff905d9, type: 3}
+  - {fileID: 21300000, guid: f8006e3460b21384b9a04aad940ec9a1, type: 3}
   BlockClear: 0
   SpawnPointForDifficulty: []
   CuScore: 0
