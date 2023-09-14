@@ -49,10 +49,24 @@ public class ItemSpawnManager : MonoBehaviour
             switch (randItem)
             {
                 case 0:
-                    SpawnPaddleItem(0, 1, SpawnPoint);
+                    if(PlayerPrefs.GetInt("PlayerDish") == 1) // 접시면
+                    {
+                        SpawnPaddleItem(0, 3, SpawnPoint);
+                    }
+                    else if (PlayerPrefs.GetInt("PlayerDish") == 2) // 보울이면
+                    {
+                        SpawnPaddleItem(0, 1, SpawnPoint);
+                    }
                     break;
                 case 1:
-                    SpawnPaddleItem(1, 2, SpawnPoint);
+                    if (PlayerPrefs.GetInt("PlayerDish") == 1) // 접시면
+                    {
+                        SpawnPaddleItem(1, 4, SpawnPoint);
+                    }
+                    else if (PlayerPrefs.GetInt("PlayerDish") == 2) // 보울이면
+                    {
+                        SpawnPaddleItem(1, 2, SpawnPoint);
+                    }
                     break;
                 case 2:
                     SpawnBallItem(SpawnPoint);
